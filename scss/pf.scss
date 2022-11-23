@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+html,body {
+  position: relative;
+  min-height: 100vh;
+  background-color: #E1E8EE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jua', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Jua', sans-serif;
+}
+.button.name{
+  border: 2px solid #d2bdff;
+  height: 80px;
+  width: 200px;
+  margin-right: 0;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Jua', sans-serif;
+  left: 20px;
+  
+  &::after {
+    content: "이름";
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #d2bdff;
+    transition: all 0.1s linear;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    height: 15px;
+    width: 15px;
+    background: #d2bdff;
+    box-shadow: 0px 0px 10px 3px #0ff;
+    margin-left: -8px;
+    margin-top: -8px;
+    opacity: 0;
+    transition: all 0.1s linear;
+    border-radius: 100%;
+    animation: star 1.3s linear infinite;
+  }
+
+  @keyframes star {
+    0% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+    25% {
+      margin-left: 194px;
+      
+      margin-top: -8px;
+    }
+
+    50% {
+      margin-left: 194px;
+      margin-top: 75px;
+    }
+    75% {
+      margin-left: -8px;
+      margin-top: 75px;
+    }
+    100% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      animation: star 1.3s linear infinite;
+    }
+
+    &::after {
+      content: "유지민";
+      text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc,
+        0 0 30px #82bedc, 0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
+    }
+  }
+}
+.button.age{
+  border: 2px solid #d2bdff;
+  height: 80px;
+  width: 200px;
+  margin-right: 0;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Jua', sans-serif;
+  left: 20px;
+  margin-top: 10px;
+  &::after {
+    content: "나이";
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #d2bdff;
+    transition: all 0.1s linear;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    height: 15px;
+    width: 15px;
+    background: #d2bdff;
+    box-shadow: 0px 0px 10px 3px #0ff;
+    margin-left: -8px;
+    margin-top: -8px;
+    opacity: 0;
+    transition: all 0.1s linear;
+    border-radius: 100%;
+    animation: star 1.3s linear infinite;
+  }
+
+  @keyframes star {
+    0% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+    25% {
+      margin-left: 194px;
+      margin-top: -8px;
+    }
+
+    50% {
+      margin-left: 194px;
+      margin-top: 75px;
+    }
+    75% {
+      margin-left: -8px;
+      margin-top: 75px;
+    }
+    100% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      animation: star 1.3s linear infinite;
+    }
+
+    &::after {
+      content: "22세";
+      text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc,
+        0 0 30px #82bedc, 0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
+    }
+  }
+}
+.button.grade{
+  border: 2px solid #d2bdff;
+  height: 80px;
+  width: 200px;
+  margin-right: 0;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Jua', sans-serif;
+  left: 20px;
+  margin-top: 10px;
+  &::after {
+    content: "학년";
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #d2bdff;
+    transition: all 0.1s linear;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    height: 15px;
+    width: 15px;
+    background: #d2bdff;
+    box-shadow: 0px 0px 10px 3px #0ff;
+    margin-left: -8px;
+    margin-top: -8px;
+    opacity: 0;
+    transition: all 0.1s linear;
+    border-radius: 100%;
+    animation: star 1.3s linear infinite;
+  }
+
+  @keyframes star {
+    0% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+    25% {
+      margin-left: 194px;
+      margin-top: -8px;
+    }
+
+    50% {
+      margin-left: 194px;
+      margin-top: 75px;
+    }
+    75% {
+      margin-left: -8px;
+      margin-top: 75px;
+    }
+    100% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      animation: star 1.3s linear infinite;
+    }
+
+    &::after {
+      content: "2학년";
+      text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc,
+        0 0 30px #82bedc, 0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
+    }
+  }
+}
+.button.number{
+  border: 2px solid #d2bdff;
+  height: 80px;
+  width: 200px;
+  margin-right: 0;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Jua', sans-serif;
+  left: 20px;
+  margin-top: 10px;
+  &::after {
+    content: "번호";
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #d2bdff;
+    transition: all 0.1s linear;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    height: 15px;
+    width: 15px;
+    background: #d2bdff;
+    box-shadow: 0px 0px 10px 3px #0ff;
+    margin-left: -8px;
+    margin-top: -8px;
+    opacity: 0;
+    transition: all 0.1s linear;
+    border-radius: 100%;
+    animation: star 1.3s linear infinite;
+  }
+
+  @keyframes star {
+    0% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+    25% {
+      margin-left: 194px;
+      margin-top: -8px;
+    }
+
+    50% {
+      margin-left: 194px;
+      margin-top: 75px;
+    }
+    75% {
+      margin-left: -8px;
+      margin-top: 75px;
+    }
+    100% {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      animation: star 1.3s linear infinite;
+    }
+
+    &::after {
+      content: "24번";
+      text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #82bedc,
+        0 0 30px #82bedc, 0 0 40px #82bedc, 0 0 50px #82bedc, 0 0 60px #82bedc;
+    }
+  }
+}
+.button1 {
+  position: relative;
+  display: inline-block;
+ margin-bottom: 10px;
+  border-radius: 4px;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  
+  font-family: 'Jua', sans-serif;
+  filter: hue-rotate(0deg);
+  border: 2px solid #d2bdff;
+  transition: all 0.1s linear;
+
+ margin-top: 0px;
+  &:hover {
+    border: 1px solid transparent;
+    span {
+      position: absolute;
+      display: block;
+
+      &:nth-child(1) {
+        filter: hue-rotate(0deg);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #3a86ff);
+        animation: animate1 1s linear infinite;
+      }
+      @keyframes animate1 {
+        0% {
+          left: -100%;
+        }
+        50%,
+        100% {
+          left: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        filter: hue-rotate(60deg);
+        top: -100%;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #3a86ff);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+      }
+
+      @keyframes animate2 {
+        0% {
+          top: -100%;
+        }
+        50%,
+        100% {
+          top: 100%;
+        }
+      }
+      &:nth-child(3) {
+        filter: hue-rotate(120deg);
+        bottom: 0;
+        right: 0;
+        width: 100%;
+
+        background: linear-gradient(270deg, transparent, #3a86ff);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.5s;
+      }
+      @keyframes animate3 {
+        0% {
+          right: -100%;
+          height: 3px;
+        }
+        50%,
+        100% {
+          height: 2px;
+          right: 100%;
+        }
+      }
+
+      &:nth-child(4) {
+        filter: hue-rotate(300deg);
+        bottom: -100%;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #3a86ff);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+      }
+      @keyframes animate4 {
+        0% {
+          bottom: -100%;
+        }
+        50%,
+        100% {
+          bottom: 100%;
+        }
+      }
+      &:hover { 
+        background-position: 100% 0;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        
+      
+      }
+      &:focus {outline: none;
+
+      }
+    }
+  }
+}
+button.submit-btn.karina{
+  display: block;
+  bottom: 50px;
+  position: relative;
+  margin-top: 10px;
+  }
+  
+  button.submit-btn.aespa{ 
+    display: block;
+  bottom: 50px;
+  position: relative;
+  margin-top: 10px;
+  }
+  .button1.aespa{
+    padding: 10px 40px;
+    bottom: 40px;
+   left: 52px;
+  }
+  .button1.karina{
+    padding: 10px 45px;
+    bottom: 40px;
+    left: 52px;
+  
+  }
+  .button1.name{
+    padding: 10px 45px;
+    bottom: 40px;
+    left: 52px;
+  
+  }
+ 
+.form-structor {
+  background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+  border-radius: 15px;
+  height: 550px;
+  width: 350px;
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    opacity: .8;
+    position: absolute;
+    top: 0;right:0;bottom:0;left:0;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 500px;
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+
+  
+  }
+  
+  .signup {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    width: 65%;
+    z-index: 5;
+    -webkit-transition: all .3s ease;
+    height: 80%;
+    
+    
+    &.slide-up {
+      top: 5%;
+      -webkit-transform: translate(-50%, 0%);
+      -webkit-transition: all .3s ease;
+    }
+    
+    &.slide-up .form-holder,
+    &.slide-up .submit-btn,
+    &.slide-up .button1, 
+    &.slide-up .picture,
+    &.slide-up .button{
+    opacity: 0;
+      visibility: hidden;
+    }
+   
+    
+    &.slide-up .form-title {
+      font-size: 1em;
+      cursor: pointer;
+    }
+    
+    &.slide-up .form-title span {
+      margin-right: 5px;
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: all .3s ease;
+    }
+    
+    .form-title {
+      color: #fff;
+      font-size: 1.7em;
+      text-align: center;
+      margin-bottom: 100px;
+      margin-top: 0px;
+      
+      span {
+        color: rgba(0,0,0,0.4);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all .3s ease;
+      }
+    }
+    
+    .form-holder {
+      border-radius: 15px;
+      background-color: #fff;
+      overflow: hidden;
+      margin-top: 0px;
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: all .3s ease;
+      
+      .input {
+        border: 0;
+        outline: none;
+        box-shadow: none;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 8px 15px;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        font-size: 12px;
+        
+        &:last-child {
+          border-bottom: 0;
+        }
+        &::-webkit-input-placeholder {
+          color: rgba(0,0,0,0.4);
+        }
+      }
+    }
+    
+  }
+  
+  
+  
+ 
+
+
+
+
+  .login {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+    z-index: 5;
+    -webkit-transition: all .3s ease;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    
+
+    &::before {
+      content: '';
+    position: absolute;
+      left: 50%;
+      top: -20px;
+      -webkit-transform: translate(-50%, 0);
+      background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+      width: 200%;
+      height: 600px;
+      border-radius: 50%;
+      z-index: 4;
+      -webkit-transition: all .3s ease;
+    }
+    
+    .center {
+      position: absolute;
+      top: calc(50% - 10%);
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      width: 65%;
+      z-index: 5;
+      -webkit-transition: all .3s ease;
+      
+      .form-title {
+        color: #000;
+        font-size: 1.7em;
+        text-align: center;
+        margin-bottom: 60px;
+        span {
+          color: rgba(0,0,0,0.4);
+          opacity: 0;
+          visibility: hidden;
+          -webkit-transition: all 0.3s ease;
+        }
+      }
+
+      .form-holder {
+        border-radius: 15px;
+        background-color: #fff;
+        border: 1px solid #eee;
+        overflow: hidden;
+        margin-top: 50px;
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: all .3s ease;
+
+        .input {  
+          border: 0;
+          outline: none;
+          box-shadow: none;
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          padding: 8px 15px;
+          border-bottom: 1px solid #eee;
+          width: 100%;
+          font-size: 12px;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+          &::-webkit-input-placeholder {
+            color: rgba(0,0,0,0.4);
+          }
+
+        }
+      }
+
+      .submit-btn {
+        border:none;
+        border-radius: 50px;
+        margin-bottom: 50px;
+       
+        text-align: center;
+        width: 200px;
+        font-size: 16px;
+        font-weight: 600;
+        height: 55px;
+        cursor: pointer;
+        color: #fff;
+        visibility: visible;
+        background-size: 300% 100%;
+        font-family: 'Jua', sans-serif;
+        background-image: linear-gradient(to right,  #f8e646, #99e819,#37f18b,#19e8bb);
+    box-shadow: inset 0px 0px 10px rgb(238, 255, 0);
+
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+        &:hover { 
+          background-position: 100% 0;
+          -o-transition: all .4s ease-in-out;
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+          
+        
+        }
+        &:focus {outline: none;
+
+        }
+      }
+    }
+    
+    &.slide-up {
+      top: 90%;
+      -webkit-transition: all .3s ease;
+    }
+    
+    &.slide-up .center {
+      top: 10%;
+      -webkit-transform: translate(-50%, 0%);
+      -webkit-transition: all .3s ease;
+    }
+    
+    &.slide-up .form-holder,
+    &.slide-up .submit-btn,
+    &.slide-up .button1,
+    &.slibe-up .picture,
+    &.slibe-up .button.name{
+      opacity: 0;
+      visibility: hidden;
+      // -webkit-transition: all .3s ease;
+    }
+
+    &.slide-up .button{
+      -webkit-transform: translate(0%, 50%);
+      -webkit-transition: all .3s ease;
+      
+    }
+    &.slide-up .form-title {
+      font-size: 1em;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      -webkit-transition: all .3s ease;
+    }
+
+    &.slide-up .form-title span {
+      margin-right: 5px;
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: all .3s ease;
+    }
+  }
+}

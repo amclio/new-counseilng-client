@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>conseling</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="./scripts.js"></script>
+
+    <link rel="stylesheet" href="write.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+      body {
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        display: grid;
+        height: 100vh;
+        place-items: center;
+        background-image: linear-gradient(-45deg, #ffc796 0%, #ff6b95 100%);
+      }
+
+      .container {
+        background-image: linear-gradient(-45deg, #ffecd2 0%, #fcb69f 100%);
+        position: relative;
+
+        border-radius: 15px;
+        width: 1500px;
+        height: 900px;
+        color: black;
+      }
+
+      .container:hover {
+        /* background: #03e9f4; */
+        color: #050801;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 1), 0 0 25px rgb(69, 118, 252),
+          0 0 50px rgba(253, 235, 29, 1);
+
+        /* -webkit-box-reflect:below 1px linear-gradient(transparent, #0005); */
+      }
+
+      .title {
+        font-size: 50px;
+        font-family: 'Jua', sans-serif;
+        margin-left: 60px;
+        margin-top: 35px;
+        color: rgb(255, 255, 255);
+      }
+
+      hr[role='tournament'] {
+        border: 0px solid;
+        height: 1px;
+        background-image: linear-gradient(
+          -225deg,
+          #ff057c 0%,
+          #8d0b93 50%,
+          #321575 100%
+        );
+        width: 95%;
+        display: block;
+      }
+      hr[role='tournament']::before {
+        position: absolute;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: #008cba;
+        border-left: 0px solid;
+        border-top: 0px solid;
+        padding: 10px;
+        transform: rotate(45deg);
+        left: 50%;
+        margin: -10px 0px 0px -22px;
+        content: '';
+      }
+
+      .user-box {
+        position: relative;
+        margin-right: 200px;
+        width: 30%;
+        display: inline-block;
+        right: 0;
+        margin-left: 60px;
+        margin-top: 10px;
+      }
+      .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 27px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+      }
+      .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 27px;
+        color: white;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+
+      .user-box input:focus ~ label,
+      .user-box input:valid ~ label {
+        top: -23px;
+        left: 0;
+        color: #000000;
+        font-size: 19px;
+      }
+
+      .text {
+        width: 1300px;
+        height: 500px;
+        display: block;
+
+        background-color: black;
+        margin-top: 25px;
+        margin-left: 100px;
+        text-decoration: #008cba;
+      }
+      textarea {
+        display: block;
+        width: 85%;
+        height: 450px;
+        box-sizing: border-box;
+        resize: vertical;
+        padding: 15px;
+        border-width: 0px;
+        margin-left: 108px;
+        margin-top: 30px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      a {
+        position: relative;
+        display: inline-block;
+        padding: 25px 30px;
+        margin: 40px 0;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+        letter-spacing: 4px;
+        overflow: hidden;
+        margin-right: 50px;
+      }
+      a:hover {
+        background-image: linear-gradient(
+          -225deg,
+          #ff057c 0%,
+          #8d0b93 50%,
+          #321575 100%
+        );
+        color: #ffffff;
+        box-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff,
+          0 0 200px #ffffff;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      }
+      a:nth-child(1) {
+        filter: hue-rotate(270deg);
+      }
+      a:nth-child(2) {
+        filter: hue-rotate(110deg);
+      }
+      a span {
+        position: absolute;
+        display: block;
+      }
+      a span:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-image: linear-gradient(
+          -225deg,
+          #ff057c 0%,
+          #8d0b93 50%,
+          #321575 100%
+        );
+        animation: animate1 1s linear infinite;
+      }
+      @keyframes animate1 {
+        0% {
+          left: -100%;
+        }
+        50%,
+        100% {
+          left: 100%;
+        }
+      }
+      a span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-image: linear-gradient(
+          -225deg,
+          #ff057c 0%,
+          #8d0b93 50%,
+          #321575 100%
+        );
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+      }
+      @keyframes animate2 {
+        0% {
+          top: -100%;
+        }
+        50%,
+        100% {
+          top: 100%;
+        }
+      }
+      a span:nth-child(3) {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-image: linear-gradient(
+          -225deg,
+          #ff057c 0%,
+          #8d0b93 50%,
+          #321575 100%
+        );
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.5s;
+      }
+      @keyframes animate3 {
+        0% {
+          right: -100%;
+        }
+        50%,
+        100% {
+          right: 100%;
+        }
+      }
+
+      a span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background-image: linear-gradient(
+          -225deg,
+          #ff057c 0%,
+          #8d0b93 50%,
+          #321575 100%
+        );
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+      }
+      @keyframes animate4 {
+        0% {
+          bottom: -100%;
+        }
+        50%,
+        100% {
+          bottom: 100%;
+        }
+      }
+
+      .d {
+        margin-left: 611px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="title">고민상담 게시판 글 작성</div>
+      <hr role="tournament" />
+
+      <div class="user-box">
+        <input type="text" name="" required="" />
+        <label>제목</label>
+      </div>
+
+      <div class="user-box mm">
+        <input type="text" name="" required="" />
+        <label>글쓴이</label>
+      </div>
+
+      <hr role="tournament" />
+
+      <textarea placeholder="내용 입력"></textarea>
+      <hr role="tournament" />
+
+      <a href="main1.html" class="d">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        수정
+      </a>
+      <a href="view.html" class="s">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        취소
+      </a>
+    </div>
+  </body>
+</html>
