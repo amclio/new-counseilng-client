@@ -8,6 +8,14 @@
     <script type="module" src="./scripts.js"></script>
 
     <link rel="stylesheet" href="main1.css" />
+
+    <style>
+      tbody a {
+        all: unset;
+        cursor: pointer;
+        width: 100%;
+      }
+    </style>
   </head>
 
   <body translate="no">
@@ -17,9 +25,12 @@
     </h1>
 
     <div class="page">
-      <a class="d" target="_blank" href="login.html">로그인</a>
-      <a class="d" target="_blank" href="write.html">글작성</a
-      ><a class="d" target="_blank" href="pf.html">프로필</a>
+      <a class="d" href="login" id="login-button">로그인</a>
+      <a class="d" href="write" id="write-button" style="display: none"
+        >글작성</a
+      ><a class="d" href="pf.html" id="profile-button" style="display: none"
+        >프로필</a
+      >
     </div>
 
     <table class="container">
@@ -32,44 +43,7 @@
           <th><h1>조회수</h1></th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>제목</td>
-          <td>한욱현</td>
-          <td>작성일</td>
-          <td>조회수</td>
-        </tr>
-        <tr>
-          <td>제목</td>
-          <td>한욱현</td>
-          <td>작성일</td>
-          <td>조회수</td>
-        </tr>
-        <tr>
-          <td>제목</td>
-          <td>한욱현</td>
-          <td>작성일</td>
-          <td>조회수</td>
-        </tr>
-        <tr>
-          <td>제목</td>
-          <td>한욱현</td>
-          <td>작성일</td>
-          <td>조회수</td>
-        </tr>
-        <tr>
-          <td>제목</td>
-          <td>한욱현</td>
-          <td>작성일</td>
-          <td>조회수</td>
-        </tr>
-        <tr>
-          <td>제목</td>
-          <td>한욱현</td>
-          <td>작성일</td>
-          <td>조회수</td>
-        </tr>
-      </tbody>
+      <tbody id="list"></tbody>
     </table>
     <div class="page">
       <a href="#" class="d">
@@ -115,5 +89,14 @@
         >>
       </a>
     </div>
+
+    <tbody>
+      <tr id="template">
+        <td class="title"></td>
+        <td class="person"></td>
+        <td class="date"></td>
+        <td>조회수</td>
+      </tr>
+    </tbody>
   </body>
 </html>

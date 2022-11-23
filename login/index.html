@@ -6,7 +6,6 @@
     <title>conseling</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script type="module" src="./scripts.js"></script>
-
     <link rel="stylesheet" href="scss/li2.css" />
   </head>
   <body>
@@ -15,20 +14,13 @@
         <h2>로그인</h2>
         <label>
           <span>이메일</span>
-          <input type="email" />
+          <input id="LOGIN_ID" type="email" />
         </label>
         <label>
           <span>비밀번호</span>
-          <input type="password" />
+          <input id="LOGIN_PW" type="password" />
         </label>
-        <p class="forgot-pass">비밀번호 찾기</p>
-        <button
-          type="button"
-          class="submit"
-          onclick="location.href = 'main1.html' "
-        >
-          로그인
-        </button>
+        <button type="button" class="submit" id="LOGIN_BTN">로그인</button>
       </div>
       <div class="sub-cont">
         <div class="img">
@@ -47,17 +39,17 @@
           <h2>회원가입</h2>
           <label>
             <span>이름</span>
-            <input type="text" />
+            <input type="text" id="SIGNUP_NICKNAME" />
           </label>
           <label>
             <span>이메일</span>
-            <input type="email" />
+            <input type="email" id="SIGNUP_EMAIL" />
           </label>
           <label>
             <span>비밀번호</span>
-            <input type="password" />
+            <input type="password" id="SIGNUP_PW" />
           </label>
-          <button type="button" class="submit">회원가입</button>
+          <button type="button" class="submit" id="SIGNUP_BTN">회원가입</button>
         </div>
       </div>
     </div>

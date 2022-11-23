@@ -5,7 +5,7 @@
 
     <title>conseling</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script type="module" src="./scripts.js"></script>
+    <script type="module" src="./post-scripts.js"></script>
 
     <link rel="stylesheet" href="write.css" />
     <style>
@@ -301,49 +301,30 @@
       <span></span>
       <span></span>
       <div class="incon">
-        <div class="title">제목</div>
+        <div class="title" id="post-title">제목</div>
 
         <hr role="tournament" />
         <div class="tt">번호:</div>
-        <div class="tl">1</div>
+        <div class="tl" id="post-id"></div>
         <div class="tt">글쓴이:</div>
-        <div class="tl">한욱현</div>
+        <div class="tl" id="post-author">한욱현</div>
         <div class="tt">작성일:</div>
-        <div class="tl">2022.11.9</div>
+        <div class="tl" id="post-date">2022.11.9</div>
         <div class="tt">조회:</div>
         <div class="tl">0</div>
 
         <hr role="tournament" />
 
-        <div class="mt">
-          본문<br />
-          본문<br />
-          본문<br />
-          본문<br />
-          본문<br />
-          본문<br />
-          본문<br />
-          본문<br />
-          본문<br />
-          본문<br />
-          본문<br />본문<br />본문<br />본문<br />
-        </div>
+        <div class="mt" id="post-content"></div>
       </div>
       <hr role="tournament" />
 
-      <a href="main1.html" class="d">
+      <a href="/" class="d">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         목록
-      </a>
-      <a href="rewrite.html" class="s">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        수정
       </a>
     </div>
   </body>

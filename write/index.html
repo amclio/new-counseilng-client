@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script type="module" src="./scripts.js"></script>
 
-    <link rel="stylesheet" href="write.css" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
       body {
@@ -50,7 +49,7 @@
 
       hr[role='tournament'] {
         border: 0px solid;
-        height: 1px;
+        height: 2px;
         background-image: linear-gradient(
           -225deg,
           #ff057c 0%,
@@ -139,7 +138,9 @@
         margin-bottom: 30px;
       }
 
-      a {
+      a,
+      .d,
+      .s {
         position: relative;
         display: inline-block;
         padding: 25px 30px;
@@ -152,7 +153,9 @@
         overflow: hidden;
         margin-right: 50px;
       }
-      a:hover {
+      a,
+      .d,
+      .s {
         background-image: linear-gradient(
           -225deg,
           #ff057c 0%,
@@ -283,34 +286,17 @@
       <hr role="tournament" />
 
       <div class="user-box">
-        <input type="text" name="" required="" />
+        <input type="text" name="" required="" id="title" />
         <label>제목</label>
       </div>
 
-      <div class="user-box mm">
-        <input type="text" name="" required="" />
-        <label>글쓴이</label>
-      </div>
-
       <hr role="tournament" />
 
-      <textarea placeholder="내용 입력"></textarea>
+      <textarea placeholder="내용 입력" id="content"></textarea>
       <hr role="tournament" />
 
-      <a href="main1.html" class="d">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        수정
-      </a>
-      <a href="view.html" class="s">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        취소
-      </a>
+      <button href="/" class="d" id="create-post">등록</button>
+      <button href="/" class="s">취소</button>
     </div>
   </body>
 </html>
